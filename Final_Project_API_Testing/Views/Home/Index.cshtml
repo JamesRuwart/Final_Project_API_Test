@@ -1,0 +1,18 @@
+﻿
+
+@model Question
+
+<p>@Model.results[0].question</p>
+
+<form action="../Home/Result" method="post">
+    <input type="radio" name="correct" value="@Model.results[0].correct_answer" /> <p>@Model.results[0].correct_answer</p><
+    <input type="radio" name="incorrect" value="@Model.results[0].incorrect_answers[0]" /> @Model.results[0].incorrect_answers[0]
+    <input type="radio" name="incorrect" value="@Model.results[0].incorrect_answers[1]" /> @Model.results[0].incorrect_answers[1]
+    <input type="radio" name="incorrect" value="@Model.results[0].incorrect_answers[2]" /> @Model.results[0].incorrect_answers[2]
+
+    <input type="submit"  value="Submit Answer!" />
+
+</form>
+
+
+
